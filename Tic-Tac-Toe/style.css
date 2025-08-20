@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://images.unsplash.com/photo-1601924582970-3b65cb1f52b8');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cell {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    background-color: #d0eaff;
+}
+
+.status {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#reset {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#reset:hover {
+    background-color: #005bbb;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .game-board {
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(3, 70px);
+        gap: 8px;
+    }
+
+    .cell {
+        font-size: 2rem;
+    }
+}
